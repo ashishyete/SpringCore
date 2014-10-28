@@ -1,2 +1,7 @@
-How to use property initialization and inject the values in application-context.xml
-We are setting the values using the setter. This way is called as Setter Injection. 
+How to use Setter Injection -> setting parameter values using the setter method.
+	Learning4Circle
+	Learning4Triangle
+	
+How to use the Constructor Injection -> setting parameter values using constructor.
+	Learning4Rectangle
+	Learning4Cube	

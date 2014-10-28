@@ -4,10 +4,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+<!-- package 3 -->
 <bean name="learning3triangle" class="com.spring.learning3.Learning3Triangle"/>
 <bean name="learning3rectangle" class="com.spring.learning3.Learning3Rectangle"/>
 
-
+<!-- package 4 -->
+<!-- setter injection -->
 <bean name="learning4circle" class="com.spring.learning4.Learning4Circle">
 <property name="radius" value="20"/>
 </bean>
@@ -16,6 +18,18 @@
 <property name="area" value="100"></property>
 </bean>
 
+<!-- constructor injection -->
+<bean name="learning4rectangle" class="com.spring.learning4.Learning4Rectangle">
+<constructor-arg index="0" value="10.0"/>
+<constructor-arg index="1" value="20.0"/>
+<constructor-arg index="2" value="Rectangle"/>
+</bean>
+
+<bean name="learning4cube" class="com.spring.learning4.Learning4Cube">
+<constructor-arg value="3"/>
+</bean>
+
+<!-- package 5 -->
 
 </beans>
           
