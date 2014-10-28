@@ -1,0 +1,2 @@
+How to use property initialization and inject the values in application-context.xml
+We are setting the values using the setter. This way is called as Setter Injection. 

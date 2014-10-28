@@ -6,5 +6,16 @@
 
 <bean name="learning3triangle" class="com.spring.learning3.Learning3Triangle"/>
 <bean name="learning3rectangle" class="com.spring.learning3.Learning3Rectangle"/>
+
+
+<bean name="learning4circle" class="com.spring.learning4.Learning4Circle">
+<property name="radius" value="20"/>
+</bean>
+
+<bean name="learning4triangle" class="com.spring.learning4.Learning4Triangle">
+<property name="area" value="100"></property>
+</bean>
+
+
 </beans>
           
