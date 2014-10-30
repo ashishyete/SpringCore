@@ -1,35 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!-- package 3 -->
-<bean name="learning3triangle" class="com.spring.learning3.Learning3Triangle"/>
-<bean name="learning3rectangle" class="com.spring.learning3.Learning3Rectangle"/>
+	<!-- package 3 -->
+	<bean name="learning3triangle" class="com.spring.learning3.Learning3Triangle" />
+	<bean name="learning3rectangle" class="com.spring.learning3.Learning3Rectangle" />
 
-<!-- package 4 -->
-<!-- setter injection -->
-<bean name="learning4circle" class="com.spring.learning4.Learning4Circle">
-<property name="radius" value="20"/>
-</bean>
+	<!-- package 4 -->
+	<!-- setter injection -->
+	<bean name="learning4circle" class="com.spring.learning4.Learning4Circle">
+		<property name="radius" value="20" />
+	</bean>
 
-<bean name="learning4triangle" class="com.spring.learning4.Learning4Triangle">
-<property name="area" value="100"></property>
-</bean>
+	<bean name="learning4triangle" class="com.spring.learning4.Learning4Triangle">
+		<property name="area" value="100"></property>
+	</bean>
 
-<!-- constructor injection -->
-<bean name="learning4rectangle" class="com.spring.learning4.Learning4Rectangle">
-<constructor-arg index="0" value="10.0"/>
-<constructor-arg index="1" value="20.0"/>
-<constructor-arg index="2" value="Rectangle"/>
-</bean>
+	<!-- constructor injection -->
+	<bean name="learning4rectangle" class="com.spring.learning4.Learning4Rectangle">
+		<constructor-arg index="0" value="10.0" />
+		<constructor-arg index="1" value="20.0" />
+		<constructor-arg index="2" value="Rectangle" />
+	</bean>
 
-<bean name="learning4cube" class="com.spring.learning4.Learning4Cube">
-<constructor-arg value="3"/>
-</bean>
+	<bean name="learning4cube" class="com.spring.learning4.Learning4Cube">
+		<constructor-arg value="3" />
+	</bean>
 
-<!-- package 5 -->
+	<!-- package 5 -->
+
+	<bean name="learning5employee" class="com.spring.learning5.Learning5Employee">
+		<property name="empInfo1" ref="employeeInfo1" />
+		<property name="empInfo2" ref="employeeInfo2" />
+		<property name="empInfo3" ref="employeeInfo3" />
+	</bean>
+
+	<bean name="employeeInfo1" class="com.spring.learning5.Learning5EmployeeInfo">
+		<property name="empId" value="1" />
+		<property name="empName" value="Ashish" />
+		<property name="empDesg" value="S.E" />
+	</bean>
+	<bean name="employeeInfo2" class="com.spring.learning5.Learning5EmployeeInfo">
+		<property name="empId" value="2" />
+		<property name="empName" value="Nidhi" />
+		<property name="empDesg" value="S.S.E" />
+	</bean>
+	<bean name="employeeInfo3" class="com.spring.learning5.Learning5EmployeeInfo">
+		<property name="empId" value="3" />
+		<property name="empName" value="Raashi" />
+		<property name="empDesg" value="Manager" />
+	</bean>
 
 </beans>
           

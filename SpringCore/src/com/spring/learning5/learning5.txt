@@ -1,0 +1,3 @@
+How to inject object from the application-context.xml
+Employee has EmployeeInfo, The EmployeeInfo is set in application-context.xml
+Employee bean have a reference of employeeInfo.
