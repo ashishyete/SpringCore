@@ -53,5 +53,35 @@
 		<property name="empDesg" value="Manager" />
 	</bean>
 
+	<!-- Car details -->
+	<bean name="learning5car" class="com.spring.learning5.Learning5Car">
+		<property name="carinfo1" ref="carinfo1"></property>
+		<!-- adding bean as inner bean rather than giving a reference bean -->
+		<property name="carinfo2">
+			<bean class="com.spring.learning5.Learning5CarInfo">
+				<property name="carType" value="Luxury" />
+				<property name="carBrand" value="Mercedes" />
+				<property name="carPrice" value="80K$" />
+				<property name="carAvg" value="Average" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean name="carinfo1" class="com.spring.learning5.Learning5CarInfo">
+		<property name="carType" value="Sports" />
+		<property name="carBrand" value="Ferrari" />
+		<property name="carPrice" value="100K$" />
+		<property name="carAvg" value="minimum" />
+	</bean>
+
+<alias name="learning5car" alias="learning5car-alias"/>
+
+<!--  -->
+
+<bean name="learning6vehicle" class="com.spring.learning6.Learning6Vehicle">
+
+</bean>
+
+
 </beans>
           
