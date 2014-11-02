@@ -1,0 +1,21 @@
+Spring autowiring concept. 
+Autowiring helps us in reducing some of the configurations while giving reference.
+
+autowire="byName" -> this property will create referencing based on the property name defined.
+for ex: if we have 3 beans named
+bean1
+bean2
+bean3 all these beans have the same as type name in the class as
+	private SampleBean bean1;
+	private SampleBean bean2;
+	private SampleBean bean3;
+and all the beans are defined in the application-context.xml then autowire="byName" will automatically reference all beans.
+
+	
+autowire="byType" -> this property will create referencing based on the type.
+for using this property a class should have one and only one distinct type, else the spring will not be able to guess the type and create ambiguity.
+	
+	
+autowire="constructor" -> this property will create referencing based on the class's constructor defined.
+for using this property a class should have one and only one distinct constructor, else the spring will not be able to guess the type and create ambiguity.
+(same as autowire="byType")	 

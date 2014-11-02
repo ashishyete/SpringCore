@@ -74,13 +74,49 @@
 		<property name="carAvg" value="minimum" />
 	</bean>
 
-<alias name="learning5car" alias="learning5car-alias"/>
+	<alias name="learning5car" alias="learning5car-alias" />
 
-<!--  -->
+	<!--Learning 6 how to initilize collections using Springs -->
 
-<bean name="learning6vehicle" class="com.spring.learning6.Learning6Vehicle">
+	<bean name="learning6vehicle" class="com.spring.learning6.Learning6Vehicle">
+		<property name="vehicleInfo">
+			<list>
+				<ref bean="learning6vehicleinfo1" />
+				<ref bean="learning6vehicleinfo2" />
+			</list>
+		</property>
+	</bean>
 
-</bean>
+	<bean name="learning6vehicleinfo1" class="com.spring.learning6.Learning6VehicleInfo">
+		<property name="vehicleType" value="2Wheeler" />
+		<property name="vehicleModel" value="Bajaj" />
+		<property name="vehicleUsage" value="Office travel" />
+	</bean>
+	<bean name="learning6vehicleinfo2" class="com.spring.learning6.Learning6VehicleInfo">
+		<property name="vehicleType" value="4Wheeler" />
+		<property name="vehicleModel" value="Maruti" />
+		<property name="vehicleUsage" value="In Cty" />
+	</bean>
+
+
+	<!-- Learning 7 what is bean autowiring -->
+
+	<!-- autowire="byType" -->
+	<!-- autowire="constructor"  these 2 configrations are not used in this example see learning7.txt for more information--> 
+	<bean name="learning7vehicle" class="com.spring.learning7.Learning7Vehicle" autowire="byName">
+	<!-- <property name="learning7vehicleInfo1" ref="learning7vehicleInfo1"/> -->
+	</bean>
+
+	<bean name="learning7vehicleInfo1" class="com.spring.learning7.Learning7VehicleInfo">
+		<property name="vehicleType" value="2Wheeler" />
+		<property name="vehicleModel" value="Bajaj" />
+		<property name="vehicleUsage" value="Office travel" />
+	</bean>
+	<bean name="learning7vehicleInfo2" class="com.spring.learning7.Learning7VehicleInfo">
+		<property name="vehicleType" value="4Wheeler" />
+		<property name="vehicleModel" value="Maruti" />
+		<property name="vehicleUsage" value="In Cty" />
+	</bean>
 
 
 </beans>
