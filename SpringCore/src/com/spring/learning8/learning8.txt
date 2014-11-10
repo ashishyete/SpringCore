@@ -2,8 +2,10 @@ Used 2 interfaces in this example8.
 1) ApplicationContextAware 
 2) BeanNameAware
 
+ApplicationContextAware
 In a situation where the main bean class is having Singleton Scope and the autowired (called beans are having scope Prototype),
 in this case to create an instance of the prototype beans we need to use ApplicationContextAware interface to get the context,
 from application-context.xml and then using this we can create instance again by .getbean("");
 
+BeanNameAware
 If we want to know/alter the bean name declared, we can use BeanName Aware.
