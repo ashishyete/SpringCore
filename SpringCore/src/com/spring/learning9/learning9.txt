@@ -1,0 +1,22 @@
+Life cycle call backs in Springs.
+
+For calling the destroy() method, spring should know, when the application is terminating.
+In our case the application is terminating when the main method ends.
+
+We should make a small change in the bean class, we need to register a shutdownhook.
+
+change the calling from  
+ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
+to
+AbstractApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
+and put
+context.registerShutdownHook();
+
+
+A) Calling the initMethod and the destroy methods (Using Spring Binding interfaces)
+in the bean implement InitializingBean,DisposableBean
+
+B) Creating UserDefined init method and destroy method and call them in the application-context.xml
+
+C) If the init methods and the destroy methods are same for all the beans then, we can call them always, by calling them directly inside beans tag.
+<beans default-init-method="methodName" default-destroy-method="methodName">

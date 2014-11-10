@@ -24,6 +24,7 @@ public class Learning3App {
 
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"application-context.xml");
+//		//context.registerShutdownHook();
 		shape = (Learning3Shape) context.getBean("learning3rectangle");
 		shape.draw();
 
