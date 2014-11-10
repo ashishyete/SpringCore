@@ -118,6 +118,24 @@
 		<property name="vehicleUsage" value="In Cty" />
 	</bean>
 
+<!-- Learning 8 Application Context Aware and BeanNameAware -->
+<bean name="car" class="com.spring.learning8.Learning8Car" autowire="byName" />
+
+	<bean name="carInfo1" class="com.spring.learning8.Learning8CarInfo">
+		<property name="carId" value="1" />
+		<property name="carName" value="Suzuki" />
+		<property name="carMileage" value="20" />
+	</bean>
+	<bean name="carInfo2" class="com.spring.learning8.Learning8CarInfo">
+		<property name="carId" value="2" />
+		<property name="carName" value="Maruti" />
+		<property name="carMileage" value="40" />
+	</bean>
+	<bean name="carInfo3" class="com.spring.learning8.Learning8CarInfo">
+		<property name="carId" value="3" />
+		<property name="carName" value="BMW" />
+		<property name="carMileage" value="10" />
+	</bean>
 
 </beans>
           
