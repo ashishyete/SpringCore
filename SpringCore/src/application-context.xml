@@ -137,6 +137,7 @@
 		<property name="carMileage" value="10" />
 	</bean>
 
+<!-- Learning 9 init and destroy methods -->
 <bean name="learning9Car" class="com.spring.learning9.Learning9Car" init-method="initLearning9Car" destroy-method="destroyLearning9Car">
 	<property name="learning9CarInfo1" ref="learning9CarInfo1"/>
 	<property name="learning9CarInfo2" ref="learning9CarInfo2"/>
@@ -151,6 +152,10 @@
 	<property name="carId" value="2" />
 	<property name="carName" value="2" />
 </bean>
+
+<!-- Learning10 BeanPostProcessor -->
+<bean class="com.spring.learning10.DisplayBeanName"/>
+
 
 </beans>
           
