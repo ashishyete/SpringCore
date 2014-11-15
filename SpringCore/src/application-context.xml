@@ -156,6 +156,10 @@
 <!-- Learning10 BeanPostProcessor -->
 <bean class="com.spring.learning10.DisplayBeanName"/>
 
+<!-- Learning11 Coding to Interfaces -->
+<bean id="learning11circle" class="com.spring.learning11.Learning11Circle"/>
+<bean id="learning11rectangle" class="com.spring.learning11.Learning11Rectangle"/>
+
 
 </beans>
           
