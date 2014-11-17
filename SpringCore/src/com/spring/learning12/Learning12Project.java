@@ -22,7 +22,7 @@ public class Learning12Project {
 	}
 
 	@Autowired
-	@Qualifier("learning12ProjectInfo1")
+	@Qualifier("project1")
 	public void setLearning12ProjectInfo1(
 			Learning12ProjectInfo learning12ProjectInfo1) {
 		this.learning12ProjectInfo1 = learning12ProjectInfo1;
