@@ -102,9 +102,11 @@
 	<!-- Learning 7 what is bean autowiring -->
 
 	<!-- autowire="byType" -->
-	<!-- autowire="constructor"  these 2 configrations are not used in this example see learning7.txt for more information--> 
-	<bean name="learning7vehicle" class="com.spring.learning7.Learning7Vehicle" autowire="byName">
-	<!-- <property name="learning7vehicleInfo1" ref="learning7vehicleInfo1"/> -->
+	<!-- autowire="constructor" these 2 configrations are not used in this example 
+		see learning7.txt for more information -->
+	<bean name="learning7vehicle" class="com.spring.learning7.Learning7Vehicle"
+		autowire="byName">
+		<!-- <property name="learning7vehicleInfo1" ref="learning7vehicleInfo1"/> -->
 	</bean>
 
 	<bean name="learning7vehicleInfo1" class="com.spring.learning7.Learning7VehicleInfo">
@@ -118,8 +120,9 @@
 		<property name="vehicleUsage" value="In Cty" />
 	</bean>
 
-<!-- Learning 8 Application Context Aware and BeanNameAware -->
-<bean name="car" class="com.spring.learning8.Learning8Car" autowire="byName" />
+	<!-- Learning 8 Application Context Aware and BeanNameAware -->
+	<bean name="car" class="com.spring.learning8.Learning8Car"
+		autowire="byName" />
 
 	<bean name="carInfo1" class="com.spring.learning8.Learning8CarInfo">
 		<property name="carId" value="1" />
@@ -137,29 +140,72 @@
 		<property name="carMileage" value="10" />
 	</bean>
 
-<!-- Learning 9 init and destroy methods -->
-<bean name="learning9Car" class="com.spring.learning9.Learning9Car" init-method="initLearning9Car" destroy-method="destroyLearning9Car">
-	<property name="learning9CarInfo1" ref="learning9CarInfo1"/>
-	<property name="learning9CarInfo2" ref="learning9CarInfo2"/>
-</bean>
+	<!-- Learning 9 init and destroy methods -->
+	<bean name="learning9Car" class="com.spring.learning9.Learning9Car"
+		init-method="initLearning9Car" destroy-method="destroyLearning9Car">
+		<property name="learning9CarInfo1" ref="learning9CarInfo1" />
+		<property name="learning9CarInfo2" ref="learning9CarInfo2" />
+	</bean>
 
-<bean name="learning9CarInfo1" class="com.spring.learning9.Learning9CarInfo">
-	<property name="carId" value="1" />
-	<property name="carName" value="1" />
-</bean>
+	<bean name="learning9CarInfo1" class="com.spring.learning9.Learning9CarInfo">
+		<property name="carId" value="1" />
+		<property name="carName" value="1" />
+	</bean>
 
-<bean name="learning9CarInfo2" class="com.spring.learning9.Learning9CarInfo">
-	<property name="carId" value="2" />
-	<property name="carName" value="2" />
-</bean>
+	<bean name="learning9CarInfo2" class="com.spring.learning9.Learning9CarInfo">
+		<property name="carId" value="2" />
+		<property name="carName" value="2" />
+	</bean>
 
-<!-- Learning10 BeanPostProcessor -->
-<bean class="com.spring.learning10.DisplayBeanName"/>
+	<!-- Learning10 BeanPostProcessor -->
+	<bean class="com.spring.learning10.DisplayBeanName" />
 
-<!-- Learning11 Coding to Interfaces -->
-<bean id="learning11circle" class="com.spring.learning11.Learning11Circle"/>
-<bean id="learning11rectangle" class="com.spring.learning11.Learning11Rectangle"/>
+	<!-- Learning11 Coding to Interfaces -->
+	<bean id="learning11circle" class="com.spring.learning11.Learning11Circle" />
+	<bean id="learning11rectangle" class="com.spring.learning11.Learning11Rectangle" />
 
 
+	<!-- Learning12 Annotations Autowiring -->
+
+	<bean id="learning12Project" class="com.spring.learning12.Learning12Project">
+
+		<property name="learning12ProjectInfo1" ref="project1" />
+		<property name="learning12ProjectInfo2" ref="project2" />
+		<property name="learning12ProjectInfo3" ref="project3" />
+		<property name="learning12ProjectInfo4" ref="project4" />
+
+	</bean>
+
+	<bean id="project1" class="com.spring.learning12.Learning12ProjectInfo">
+		<qualifier value="learning12ProjectInfo1" />
+		<property name="projectId" value="1" />
+		<property name="projectName" value="Qbat" />
+		<property name="projectDetails"
+			value="Qbat is a Project which is used for Adjusting Customer's Bill" />
+	</bean>
+
+	<bean id="project2" class="com.spring.learning12.Learning12ProjectInfo">
+		<qualifier value="learning12ProjectInfo2" />
+		<property name="projectId" value="2" />
+		<property name="projectName" value="RCR" />
+		<property name="projectDetails"
+			value="RCR is a Project which is Stores Customer Product and Account Level Information" />
+	</bean>
+
+	<bean id="project3" class="com.spring.learning12.Learning12ProjectInfo">
+		<qualifier value="learning12ProjectInfo3" />
+		<property name="projectId" value="3" />
+		<property name="projectName" value="Sasktel" />
+		<property name="projectDetails"
+			value="Sasktel is a Project which is Getting Migrated from Matrens Mainframes to Java" />
+	</bean>
+
+	<bean id="project4" class="com.spring.learning12.Learning12ProjectInfo">
+		<qualifier value="learning12ProjectInfo4" />
+		<property name="projectId" value="4" />
+		<property name="projectName" value="ENJ" />
+		<property name="projectDetails"
+			value="ENJ is a Project which is used as a api project." />
+	</bean>
 </beans>
           
