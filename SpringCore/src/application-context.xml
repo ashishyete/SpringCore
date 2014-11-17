@@ -167,24 +167,17 @@
 
 	<!-- Learning12 Annotations Autowiring -->
 
-	<bean id="learning12Project" class="com.spring.learning12.Learning12Project">
+	<bean name="learning12Project" class="com.spring.learning12.Learning12Project"/>
 
-		<property name="learning12ProjectInfo1" ref="project1" />
-		<property name="learning12ProjectInfo2" ref="project2" />
-		<property name="learning12ProjectInfo3" ref="project3" />
-		<property name="learning12ProjectInfo4" ref="project4" />
-
-	</bean>
-
-	<bean id="project1" class="com.spring.learning12.Learning12ProjectInfo">
-		<qualifier value="learning12ProjectInfo1" />
+	<bean name="learning12ProjectInfo1" class="com.spring.learning12.Learning12ProjectInfo">
+		 <qualifier value="learning12ProjectInfo1"/>
 		<property name="projectId" value="1" />
 		<property name="projectName" value="Qbat" />
-		<property name="projectDetails"
-			value="Qbat is a Project which is used for Adjusting Customer's Bill" />
+		<property name="projectDetails" value="Qbat is a Project which is used for Adjusting Customer's Bill" />
 	</bean>
 
-	<bean id="project2" class="com.spring.learning12.Learning12ProjectInfo">
+	 <bean id="learning12ProjectInfo2" class="com.spring.learning12.Learning12ProjectInfo">
+	 <qualifier value="learning12ProjectInfo2"/>
 		<qualifier value="learning12ProjectInfo2" />
 		<property name="projectId" value="2" />
 		<property name="projectName" value="RCR" />
@@ -192,7 +185,8 @@
 			value="RCR is a Project which is Stores Customer Product and Account Level Information" />
 	</bean>
 
-	<bean id="project3" class="com.spring.learning12.Learning12ProjectInfo">
+	<bean id="learning12ProjectInfo3" class="com.spring.learning12.Learning12ProjectInfo">
+	<qualifier value="learning12ProjectInfo3"/>
 		<qualifier value="learning12ProjectInfo3" />
 		<property name="projectId" value="3" />
 		<property name="projectName" value="Sasktel" />
@@ -200,12 +194,14 @@
 			value="Sasktel is a Project which is Getting Migrated from Matrens Mainframes to Java" />
 	</bean>
 
-	<bean id="project4" class="com.spring.learning12.Learning12ProjectInfo">
+	<bean id="learning12ProjectInfo4" class="com.spring.learning12.Learning12ProjectInfo">
+	<qualifier value="learning12ProjectInfo4"/>
 		<qualifier value="learning12ProjectInfo4" />
 		<property name="projectId" value="4" />
 		<property name="projectName" value="ENJ" />
 		<property name="projectDetails"
 			value="ENJ is a Project which is used as a api project." />
-	</bean>
+	</bean> 
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
 </beans>
           

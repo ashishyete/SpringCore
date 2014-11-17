@@ -22,7 +22,7 @@ public class Learning12Project {
 	}
 
 	@Autowired
-	@Qualifier(value="learning12ProjectInfo1")
+	@Qualifier("learning12ProjectInfo1")
 	public void setLearning12ProjectInfo1(
 			Learning12ProjectInfo learning12ProjectInfo1) {
 		this.learning12ProjectInfo1 = learning12ProjectInfo1;
@@ -31,8 +31,9 @@ public class Learning12Project {
 	public Learning12ProjectInfo getLearning12ProjectInfo2() {
 		return learning12ProjectInfo2;
 	}
+
 	@Autowired
-	@Qualifier(value="learning12ProjectInfo2")
+	@Qualifier("learning12ProjectInfo2")
 	public void setLearning12ProjectInfo2(
 			Learning12ProjectInfo learning12ProjectInfo2) {
 		this.learning12ProjectInfo2 = learning12ProjectInfo2;
@@ -41,8 +42,9 @@ public class Learning12Project {
 	public Learning12ProjectInfo getLearning12ProjectInfo3() {
 		return learning12ProjectInfo3;
 	}
+
 	@Autowired
-	@Qualifier(value="learning12ProjectInfo3")
+	@Qualifier("learning12ProjectInfo3")
 	public void setLearning12ProjectInfo3(
 			Learning12ProjectInfo learning12ProjectInfo3) {
 		this.learning12ProjectInfo3 = learning12ProjectInfo3;
@@ -51,8 +53,9 @@ public class Learning12Project {
 	public Learning12ProjectInfo getLearning12ProjectInfo4() {
 		return learning12ProjectInfo4;
 	}
+
 	@Autowired
-	@Qualifier(value="learning12ProjectInfo4")
+	@Qualifier("learning12ProjectInfo4")
 	public void setLearning12ProjectInfo4(
 			Learning12ProjectInfo learning12ProjectInfo4) {
 		this.learning12ProjectInfo4 = learning12ProjectInfo4;

@@ -12,6 +12,7 @@ public class Learning12App {
 
 		Learning12Project p = (Learning12Project) context
 				.getBean("learning12Project");
+
 		System.out.println("**********getting informtion**************");
 		System.out.println(p.getLearning12ProjectInfo1().getProjectId());
 		System.out.println(p.getLearning12ProjectInfo1().getProjectName());
