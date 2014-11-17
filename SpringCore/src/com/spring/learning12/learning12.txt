@@ -1,1 +1,1 @@
-Demonstrating Best practice - Coding to interfaces.
+Using @AutoWire annotation.
