@@ -167,10 +167,10 @@
 
 	<!-- Learning12 Annotations Autowiring -->
 
-	<bean name="learning12Project" class="com.spring.learning12.Learning12Project">
+	<bean id="learning12Project" class="com.spring.learning12.Learning12Project">
 </bean>
 
-	<bean name="learning12ProjectInfo1" class="com.spring.learning12.Learning12ProjectInfo">
+	<bean id="learning12ProjectInfo1" class="com.spring.learning12.Learning12ProjectInfo">
 		 <qualifier value="project1"/>
 		<property name="projectId" value="1" />
 		<property name="projectName" value="Qbat" />

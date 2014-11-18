@@ -4,6 +4,7 @@
 package com.spring.learning13;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  * @author Ashish
@@ -27,6 +28,7 @@ public class Learning13School {
 	 *            the schoolInfo1 to set
 	 */
 	@Autowired
+	@Qualifier("school1")
 	public void setSchoolInfo1(Learning13SchoolInfo schoolInfo1) {
 		this.schoolInfo1 = schoolInfo1;
 	}
@@ -43,6 +45,7 @@ public class Learning13School {
 	 *            the schoolInfo2 to set
 	 */
 	@Autowired
+	@Qualifier("school2")
 	public void setSchoolInfo2(Learning13SchoolInfo schoolInfo2) {
 		this.schoolInfo2 = schoolInfo2;
 	}
@@ -59,6 +62,7 @@ public class Learning13School {
 	 *            the schoolInfo3 to set
 	 */
 	@Autowired
+	@Qualifier("school3")
 	public void setSchoolInfo3(Learning13SchoolInfo schoolInfo3) {
 		this.schoolInfo3 = schoolInfo3;
 	}

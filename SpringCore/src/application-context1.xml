@@ -5,28 +5,29 @@
 	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean name="learning13school" class="com.spring.learning13.Learning13School">
-		<!-- <property name="schoolInfo1" ref="schoolinformation1" />
-		<property name="schoolInfo2" ref="schoolinformation2" />
-		<property name="schoolInfo3" ref="schoolinformation3" /> -->
 	</bean>
 
 	<bean name="schoolInfo1" class="com.spring.learning13.Learning13SchoolInfo">
+		<qualifier value="school1"/>
 		<property name="schoolId" value="1" />
 		<property name="schoolName" value="Bishop Cotton" />
 		<property name="schoolRanking" value="1" />
 	</bean>
 
-	<!-- <bean name="schoolinformation2" class="com.spring.learning13.Learning13SchoolInfo">
+	 <bean name="schoolInfo2" class="com.spring.learning13.Learning13SchoolInfo">
+	 <qualifier value="school2"/>
 		<property name="schoolId" value="2" />
 		<property name="schoolName" value="SFS" />
 		<property name="schoolRanking" value="2" />
 	</bean>
 
-	<bean name="schoolinformation3" class="com.spring.learning13.Learning13SchoolInfo">
+	<bean name="schoolInfo3" class="com.spring.learning13.Learning13SchoolInfo">
+	<qualifier value="school3"/>
 		<property name="schoolId" value="3" />
 		<property name="schoolName" value="Mount Carmel" />
 		<property name="schoolRanking" value="3" />
-	</bean> -->
+	</bean> 
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
 </beans>
 	   					   
 	   					   
