@@ -1,1 +1,7 @@
 @Resource -- Injection of the bean using the @Resource annotation.
+works by the property "name"
+
+
+@PostConstruct -  Works as init method.
+@PreDestroy - Works as destroy Method. 
+Both of these are annotations and not required to make any changes in the application-context.xml

@@ -3,6 +3,8 @@
  */
 package com.spring.learning14;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 
 /**
@@ -39,4 +41,16 @@ public class Learning14School {
 		this.schoolInformation3 = schoolInformation3;
 	}
 
+	
+	@PostConstruct
+	public void initilizeLearning14School(){
+		System.out.println("initializing Learning14School");
+	}
+	
+	@PreDestroy
+	public void destroyLearning14School(){
+		System.out.println("destroying Learning14School");
+	}
+	
+	
 }

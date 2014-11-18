@@ -4,6 +4,7 @@
 package com.spring.learning14;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -18,8 +19,9 @@ public class Learning14App {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		ApplicationContext context = new ClassPathXmlApplicationContext(
+		AbstractApplicationContext context = new ClassPathXmlApplicationContext(
 				"application-context1.xml");
+		context.registerShutdownHook();
 		Learning14School school = (Learning14School) context
 				.getBean("learning14school");
 		System.out.println(school.getSchoolInformation1().getSchoolId());
