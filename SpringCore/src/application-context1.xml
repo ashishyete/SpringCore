@@ -1,33 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-4.1.xsd">
 
-	<bean name="learning13school" class="com.spring.learning13.Learning13School">
-	</bean>
+	<bean name="learning13school" class="com.spring.learning13.Learning13School" />
 
+	<bean name="learning14school" class="com.spring.learning14.Learning14School" />
+	
 	<bean name="schoolInfo1" class="com.spring.learning13.Learning13SchoolInfo">
-		<qualifier value="school1"/>
+		<qualifier value="school1" />
 		<property name="schoolId" value="1" />
 		<property name="schoolName" value="Bishop Cotton" />
 		<property name="schoolRanking" value="1" />
 	</bean>
 
-	 <bean name="schoolInfo2" class="com.spring.learning13.Learning13SchoolInfo">
-	 <qualifier value="school2"/>
+	<bean name="schoolInfo2" class="com.spring.learning13.Learning13SchoolInfo">
+		<qualifier value="school2" />
 		<property name="schoolId" value="2" />
 		<property name="schoolName" value="SFS" />
 		<property name="schoolRanking" value="2" />
 	</bean>
 
 	<bean name="schoolInfo3" class="com.spring.learning13.Learning13SchoolInfo">
-	<qualifier value="school3"/>
+		<qualifier value="school3" />
 		<property name="schoolId" value="3" />
 		<property name="schoolName" value="Mount Carmel" />
 		<property name="schoolRanking" value="3" />
-	</bean> 
-	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+	</bean>
+
+	<bean name="schoolInformation1" class="com.spring.learning14.Learning14SchoolInfo">
+		<property name="schoolId" value="1" />
+		<property name="schoolName" value="Bishop Cotton" />
+		<property name="schoolRanking" value="1" />
+	</bean>
+
+	<bean name="schoolInformation2" class="com.spring.learning14.Learning14SchoolInfo">
+		<property name="schoolId" value="2" />
+		<property name="schoolName" value="SFS" />
+		<property name="schoolRanking" value="2" />
+	</bean>
+
+	<bean name="schoolInformation3" class="com.spring.learning14.Learning14SchoolInfo">
+
+		<property name="schoolId" value="3" />
+		<property name="schoolName" value="Mount Carmel" />
+		<property name="schoolRanking" value="3" />
+	</bean>
+
+
+	<!-- <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" /> -->
+
+	<context:annotation-config />
+
+
+
 </beans>
 	   					   
 	   					   

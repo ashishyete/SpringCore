@@ -1,0 +1,1 @@
+@Resource -- Injection of the bean using the @Resource annotation.
