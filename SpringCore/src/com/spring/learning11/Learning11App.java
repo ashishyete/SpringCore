@@ -21,7 +21,7 @@ public class Learning11App {
 		ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
 		Learning11Shape shape =(Learning11Shape) context.getBean("learning11rectangle");
 		shape.draw();
-		
+		((ClassPathXmlApplicationContext)context).close();		
 	}
 
 }
